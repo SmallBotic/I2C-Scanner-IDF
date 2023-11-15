@@ -1,5 +1,13 @@
 #include "m_i2c.h"
 
+/**
+ * @brief Initialize the I2C driver
+ * 
+ * @param i2c_num I2C port number
+ * @param sda_io_num SDA pin number
+ * @param scl_io_num SCL pin number
+ * @param clk_speed Clock speed for the I2C bus
+ */
 esp_err_t m_i2c_master_init(i2c_port_t i2c_num, gpio_num_t sda_io_num,
                             gpio_num_t scl_io_num, uint32_t clk_speed) {
   i2c_config_t conf;
